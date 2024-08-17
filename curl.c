@@ -14,9 +14,9 @@ int main(void) {
 
   curl = curl_easy_init();
   if(curl) {
-    curl_easy_setopt(curl, CURLOPT_URL, "scp://worker1@192.168.0.106:/tmp/");
-    curl_easy_setopt(curl, CURLOPT_USERNAME, "worker1");
-    curl_easy_setopt(curl, CURLOPT_PASSWORD, "somuchwork"); // Replace with secure password handling
+    curl_easy_setopt(curl, CURLOPT_URL, "scp://username@192.168.0.106:/tmp/");
+    curl_easy_setopt(curl, CURLOPT_USERNAME, "username");
+    curl_easy_setopt(curl, CURLOPT_PASSWORD, "password"); // Replace with secure password handling
     curl_easy_setopt(curl, CURLOPT_UPLOAD, 1L);
     curl_easy_setopt(curl, CURLOPT_READDATA, fp);
     if(stat("temp.txt", &st))
